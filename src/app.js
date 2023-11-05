@@ -148,32 +148,32 @@ function FilterByTeamxSortByNoOfAwards(team){
  b.awards.length-a.awards.length)
  return arr;
 }
-//Challenge 1 - Sort players that have won _______ award _____ times and belong to _______ country in alphabetical order of their names
-function SortByNamexAwardxTimes(award, count, country){
-let arr=[]
-for(let i=0; i<players.length;i++){
-  let awardcount = 0;
- for(let j=0;j<players[i].awards.length; j++){
-  if(players[i].awards[j].name===award){
-    awardcount++;
-  }
- }
- if(awardcount === parseInt(count) && players[i].country === country){
-  arr.push(players[i])
- }
-}
- }
-arr.sort ((a,b)=> a.name.localeCompare(b.name))
-return arr;
-//Challenge 2 - Sort players that are older than _____ years in alphabetical order
-//Sort the awards won by them in reverse chronological order
-function SortByNamexOlderThan(age){
-let arr = players.filter((players)=> players.age <= parseInt(age)).map((players)=>(
-  {...players,awards: [...players.awards].sort((a,b)=>b.year - a.year),
-  }
-))
-.sort((a,b)=> a.name.localeCompare(b.name))
+// //Challenge 1 - Sort players that have won _______ award _____ times and belong to _______ country in alphabetical order of their names
+// function SortByNamexAwardxTimes(award, count, country){
+// let arr=[]
+// for(let i=0; i<players.length;i++){
+//   let awardcount = 0;
+//  for(let j=0;j<players[i].awards.length; j++){
+//   if(players[i].awards[j].name===award){
+//     awardcount++;
+//   }
+//  }
+//  if(awardcount === parseInt(count) && players[i].country === country){
+//   arr.push(players[i])
+//  }
+// }
+//  }
+// arr.sort ((a,b)=> a.name.localeCompare(b.name))
+// return arr;
+// //Challenge 2 - Sort players that are older than _____ years in alphabetical order
+// //Sort the awards won by them in reverse chronological order
+// function SortByNamexOlderThan(age){
+// let arr = players.filter((players)=> players.age <= parseInt(age)).map((players)=>(
+//   {...players,awards: [...players.awards].sort((a,b)=>b.year - a.year),
+//   }
+// ))
+// .sort((a,b)=> a.name.localeCompare(b.name))
 
-return arr;
-}
+// return arr;
+// }
 
